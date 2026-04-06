@@ -79,3 +79,18 @@ sudo chmod +x /usr/local/bin/qtcreator
 which qtcreator
 qtcreator --version
 ```
+### Создать desktop файл
+```
+cat > ~/.local/share/applications/qtcreator.desktop << 'EOF'
+[Desktop Entry]
+Version=1.0
+Name=Qt Creator 16.0.2
+Comment=Qt Creator IDE with Qt 6.5.5
+Exec=env LD_LIBRARY_PATH=/home/orangepi/Qt6.5.5/lib:/lib/aarch64-linux-gnu QT_PLUGIN_PATH=/home/orangepi/Qt6.5.5/plugins QML_IMPORT_PATH=/home/orangepi/Qt6.5.5/qml QML2_IMPORT_PATH=/home/orangepi/Qt6.5.5/qml /opt/qtcreator/bin/qtcreator
+Icon=/opt/qtcreator/share/icons/hicolor/256x256/apps/QtProject-qtcreator.png
+Terminal=false
+Type=Application
+Categories=Development;IDE;Qt;
+StartupNotify=true
+EOF
+```
