@@ -25,7 +25,7 @@ wget https://github.com/stimandrew/Install_Qt6.5.5._QtCreator16.0.2_OrangePi6Plu
 ```
 mkdir ~/Qt6.5.5
 cd ~/Qt6.5.5
-tar -xzf qt6.5.5-orangepi6plus.tar.gz
+tar -xzf ~/Downloads/qt6.5.5-orangepi6plus.tar.gz
 ```
 ### Чтобы система и пакеты находили Qt, добавьте его в пути ```PATH```, ```LD_LIBRARY_PATH``` и ```PKG_CONFIG_PATH```.
 ```
@@ -51,3 +51,20 @@ qt-cmake --version
 ldconfig -p | grep Qt6
 ```
 -------------------------------------------------------
+### Скачайте QtCreator 16.0.2
+```
+cd ~/Downloads
+wget https://github.com/stimandrew/Install_Qt6.5.5._QtCreator16.0.2_OrangePi6Plus/releases/download/v1.0.0/qtcreator-16.0.2-orangepi6plus.tar.gz
+```
+### Распакуйте архив в директорию qtcreator
+```
+mkdir /opt/qtcreator
+cd /opt/qtcreator
+tar -xzf ~/Downloads/qtcreator-16.0.2-orangepi6plus.tar.gz
+
+
+
+
+
+
+
