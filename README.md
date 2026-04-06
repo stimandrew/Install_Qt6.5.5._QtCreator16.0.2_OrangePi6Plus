@@ -61,10 +61,21 @@ wget https://github.com/stimandrew/Install_Qt6.5.5._QtCreator16.0.2_OrangePi6Plu
 mkdir /opt/qtcreator
 cd /opt/qtcreator
 tar -xzf ~/Downloads/qtcreator-16.0.2-orangepi6plus.tar.gz
+```
+### Создать скрипт в /usr/local/bin
+```
+sudo bash -c 'cat > /usr/local/bin/qtcreator << EOF
+#!/bin/bash
+export LD_LIBRARY_PATH=/home/orangepi/Qt6.5.5/lib:\$LD_LIBRARY_PATH
+export QT_PLUGIN_PATH=/home/orangepi/Qt6.5.5/plugins
+export QML_IMPORT_PATH=/home/orangepi/Qt6.5.5/qml
+export QML2_IMPORT_PATH=/home/orangepi/Qt6.5.5/qml
+exec /opt/qtcreator/bin/qtcreator "\$@"
+EOF'
 
+sudo chmod +x /usr/local/bin/qtcreator
 
-
-
-
-
-
+# Проверить
+which qtcreator
+qtcreator --version
+```
