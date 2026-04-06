@@ -94,3 +94,7 @@ Categories=Development;IDE;Qt;
 StartupNotify=true
 EOF
 ```
+### Делаем файл исполняемым
+```
+sudo chmod +x ~/.local/share/applications/qtcreator.desktop
+```
